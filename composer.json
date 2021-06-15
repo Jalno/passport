@@ -1,0 +1,13 @@
+{
+	"name": "jalno/passport",
+	"version": "0.0.1",
+	"autoload": {
+		"psr-4": {
+			"Jalno\\Passport\\": "src"
+		}
+	},
+	"require": {
+		"jalno/lumen": "^0.0.1",
+		"dusterio/lumen-passport": "^0.3.4"
+	}
+}
