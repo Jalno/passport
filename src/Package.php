@@ -7,26 +7,27 @@ use Jalno\Lumen\Packages\PackageAbstract;
 class Package extends PackageAbstract
 {
 
-	public function getProviders(): array
-	{
-		return [
-			Providers\TokenExpireServiceProvider::class,
-			\Laravel\Passport\PassportServiceProvider::class,
-			\Dusterio\LumenPassport\PassportServiceProvider::class,
-		];
-	}
-	public function basePath(): string
-	{
-		return __DIR__;
-	}
+    public function getProviders(): array
+    {
+        return [
+            Providers\TokenExpireServiceProvider::class,
+            \Laravel\Passport\PassportServiceProvider::class,
+            \Dusterio\LumenPassport\PassportServiceProvider::class,
+        ];
+    }
 
-	public function getNamespace(): string
-	{
-		return __NAMESPACE__;
-	}
+    public function basePath(): string
+    {
+        return __DIR__;
+    }
 
-	public function setupRouter(Router $router): void
-	{
-		\Dusterio\LumenPassport\LumenPassport::routes($router);
-	}
+    public function getNamespace(): string
+    {
+        return __NAMESPACE__;
+    }
+
+    public function setupRouter(Router $router): void
+    {
+        \Dusterio\LumenPassport\LumenPassport::routes($router);
+    }
 }
