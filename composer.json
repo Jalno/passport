@@ -1,7 +1,6 @@
 {
     "name": "jalno/passport",
     "description": "Jalno Passport",
-    "version": "0.0.1",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -14,7 +13,7 @@
         }
     },
     "require": {
-        "jalno/lumen": "^0.0.1",
+        "jalno/lumen": "^1.0.1",
         "dusterio/lumen-passport": "^0.3.4"
     },
     "require-dev": {
