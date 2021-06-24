@@ -31,3 +31,15 @@ jobs:
         configuration: phpstan.neon
         memory_limit: 256M
         php_version: 8.0
+
+    - name: PHPUnit Tests
+      uses: php-actions/phpunit@v3
+      with:
+        php_extensions: xdebug
+      env:
+        XDEBUG_MODE: coverage
+
+    - name: Code Coverage
+      uses: codecov/codecov-action@v1
+      with:
+        files: ./coverage/clover.xml
