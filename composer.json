@@ -2,6 +2,7 @@
     "name": "jalno/passport",
     "description": "Jalno Passport",
     "version": "0.0.1",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Jalno\\Passport\\": "src"
