@@ -7,9 +7,23 @@
             "Jalno\\Passport\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Jalno\\Passport\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "jalno/lumen": "^0.0.1",
         "dusterio/lumen-passport": "^0.3.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.8|^9.3.3"
+    },
+    "scripts": {
+        "test:unit": "./vendor/bin/phpunit",
+        "test": [
+            "@test:unit"
+        ]
     },
     "extra": {
         "jalno": {

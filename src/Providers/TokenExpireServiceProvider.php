@@ -8,15 +8,6 @@ use Illuminate\Support\ServiceProvider;
 
 class TokenExpireServiceProvider extends ServiceProvider
 {
-	/**
-	 * Register any application services.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		//
-	}
 
 	/**
 	 * Boot the authentication services for the application.
