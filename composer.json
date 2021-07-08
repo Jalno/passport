@@ -13,21 +13,34 @@
         }
     },
     "require": {
-        "jalno/lumen": "^1.0.1",
-        "dusterio/lumen-passport": "^0.3.4"
+        "illuminate/support": "^8.0",
+        "illuminate/container": "^8.0",
+        "nesbot/carbon": "^2.31",
+        "laravel/passport": ">=0.2.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5.8|^9.3.3"
+        "phpunit/phpunit": "^8.5.8|^9.3.3",
+        "nunomaduro/larastan": "^0.7.6",
+        "orchestra/testbench": "^6.18.0"
+    },
+    "suggest": {
+        "dusterio/lumen-passport": "If you want to run passport on lumen, install this package."
     },
     "scripts": {
+        "test:types": "./vendor/bin/phpstan analyse",
         "test:unit": "./vendor/bin/phpunit",
         "test": [
+            "@test:types",
             "@test:unit"
         ]
     },
     "extra": {
-        "jalno": {
-            "package": "Jalno\\Passport\\Package"
+        "laravel": {
+            "providers": [
+                "Jalno\\Passport\\TokenExpireServiceProvider",
+                "Jalno\\Passport\\LumenPassportServiceProvider",
+                "Jalno\\Passport\\PassportServiceProvider"
+            ]
         }
     }
 }

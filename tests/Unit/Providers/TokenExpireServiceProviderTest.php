@@ -1,7 +1,7 @@
 <?php
 namespace Jalno\Passport\Tests\Unit\Providers;
 
-use Jalno\Passport\Providers\TokenExpireServiceProvider;
+use Jalno\Passport\TokenExpireServiceProvider;
 use Jalno\Passport\Tests\Unit\TestCase;
 
 class TokenExpireServiceProviderTest extends TestCase {
